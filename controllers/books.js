@@ -24,14 +24,13 @@ const getSingle = async (req, res) => {
 const createBook = async (req, res) => {
   try {
     const book = {
-        name: req.body.name,
-        email: req.body.email,
-        role: req.body.role || "book",            
-        emailVerified: req.body.emailVerified ?? false,
-        profilePicture: req.body.profilePicture || null,
-        createdAt: req.body.createdAt,
-        lastLogin: req.body.lastLogin,
-        isActive: req.body.isActive ?? true
+        title: req.body.title,
+        author: req.body.author,
+        genre: req.body.genre,
+        year: req.body.year,
+        isbn: req.body.isbn,
+        availableCopies: req.body.availableCopies,
+        totalCopies: req.body.totalCopies
     };
 
     const result = await mongodb.getDatabase().collection('books').insertOne(book);
@@ -51,14 +50,13 @@ const updateBook = async (req, res) => {
   try {
     const bookId = new ObjectId(req.params.id);
     const book = {
-        name: req.body.name,
-        email: req.body.email,
-        role: req.body.role || "book",            
-        emailVerified: req.body.emailVerified ?? false,
-        profilePicture: req.body.profilePicture || null,
-        createdAt: req.body.createdAt,
-        lastLogin: req.body.lastLogin,
-        isActive: req.body.isActive ?? true
+        title: req.body.title,
+        author: req.body.author,
+        genre: req.body.genre,
+        year: req.body.year,
+        isbn: req.body.isbn,
+        availableCopies: req.body.availableCopies,
+        totalCopies: req.body.totalCopies
     };
 
     const result = await mongodb
