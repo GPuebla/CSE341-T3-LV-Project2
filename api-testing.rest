@@ -1,7 +1,7 @@
 ### LOCAL
 
 ### Get the message: Hello World!
-GET http://localhost:3000/ 
+GET http://localhost:3000/
 
 ### Get all the contacts
 GET http://localhost:3000/api/contacts
@@ -10,15 +10,17 @@ GET http://localhost:3000/api/contacts
 GET http://localhost:3000/api/contacts/68cd94b356eb35fd1106f9fc
 
 ### Create a new contact
-POST http://localhost:3000/api/contacts
+POST http://localhost:3000/api/books
 Content-Type: application/json
 
 {
-    "firstName": "Gabriel",
-    "lastName": "Rodríguez",
-    "email": "gabriel.rodriguez@email.com",
-    "favoriteColor": "Gris",
-    "birthday": "1999-10-30"
+  "title": "Clean Code",
+  "author": "Robert C. Martin",
+  "genre": "Programming",
+  "year": 2008,
+  "isbn": "9780132350884",
+  "availableCopies": 4,
+  "totalCopies": 5
 }
 
 ### RENDER
@@ -37,11 +39,13 @@ POST https://cse341-t3-lv-1-w2.onrender.com/api/contacts
 Content-Type: application/json
 
 {
-    "firstName": "Gabriel",
-    "lastName": "Rodríguez",
-    "email": "gabriel.rodriguez@email.com",
-    "favoriteColor": "Gris",
-    "birthday": "1999-10-30"
+  "title": "My Books",
+  "author": "El Perrito Faldero",
+  "genre": "Logic",
+  "year": 2015,
+  "isbn": "9780132350878",
+  "availableCopies": 2,
+  "totalCopies": 3
 }
 
 ### Update a contact
@@ -49,11 +53,13 @@ PUT https://cse341-t3-lv-1-w2.onrender.com/api/contacts/68d454ed7cc05d69db61ddde
 Content-Type: application/json
 
 {
-    "firstName": "Gabriel",
-    "lastName": "Rodríguez",
-    "email": "gabriel.rodriguez@email.com",
-    "favoriteColor": "Marron",
-    "birthday": "1999-10-30"
+  "title": "My Books 3",
+  "author": "El Perrito Faldero",
+  "genre": "Logic",
+  "year": 2008,
+  "isbn": "9780232350878",
+  "availableCopies": 2,
+  "totalCopies": 3
 }
 
 ### Delete a contact

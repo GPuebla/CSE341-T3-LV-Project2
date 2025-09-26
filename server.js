@@ -3,7 +3,7 @@ const mongodb = require('./models/database');
 const dotenv = require('dotenv');
 const routes = require('./routes/index');
 const cors = require('cors');
-//const { swaggerUi, specs } = require('./swagger');
+const { swaggerUi, specs } = require('./swagger');
 
 
 dotenv.config();
@@ -19,7 +19,7 @@ app.get('/', (req,res) => {
 
 app.use('/api', routes); 
 
-//app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
 const PORT = process.env.PORT || 3000;
 
