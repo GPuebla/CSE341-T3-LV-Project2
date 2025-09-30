@@ -1,15 +1,18 @@
-### LOCAL
+###  -----------------------------------------------  LOCAL  -----------------------------------------------------
+
 
 ### Get the message: Hello World!
 GET http://localhost:3000/
 
-### Get all the contacts
-GET http://localhost:3000/api/contacts
+###################### BOOKS #############################
 
-### Get contact by ID
-GET http://localhost:3000/api/contacts/68cd94b356eb35fd1106f9fc
+### Get all the books
+GET http://localhost:3000/api/books
 
-### Create a new contact
+### Get book by ID
+GET http://localhost:3000/api/books/68cd94b356eb35fd1106f9fc
+
+### Create a new book
 POST http://localhost:3000/api/books
 Content-Type: application/json
 
@@ -23,19 +26,22 @@ Content-Type: application/json
   "totalCopies": 5
 }
 
-### RENDER
+###  -----------------------------------------------  RENDER  -----------------------------------------------------
+
 
 ### Get the message: Hello World!
 GET https://cse341-t3-lv-1-w2.onrender.com
 
-### Get all the contacts
-GET https://cse341-t3-lv-1-w2.onrender.com/api/contacts
+###################### BOOKS #############################
 
-### Get contact by ID
-GET https://cse341-t3-lv-1-w2.onrender.com/api/contacts/68cd93fc56eb35fd1106f9f8
+### Get all the books
+GET https://cse341-t3-lv-1-w2.onrender.com/api/books
 
-### Create a new contact
-POST https://cse341-t3-lv-1-w2.onrender.com/api/contacts
+### Get book by ID
+GET https://cse341-t3-lv-1-w2.onrender.com/api/books/9780232350878
+
+### Create a new book
+POST https://cse341-t3-lv-1-w2.onrender.com/api/books
 Content-Type: application/json
 
 {
@@ -48,8 +54,8 @@ Content-Type: application/json
   "totalCopies": 3
 }
 
-### Update a contact
-PUT https://cse341-t3-lv-1-w2.onrender.com/api/contacts/68d454ed7cc05d69db61ddde
+### Update a book
+PUT https://cse341-t3-lv-1-w2.onrender.com/api/books/9780232350878
 Content-Type: application/json
 
 {
@@ -62,6 +68,9 @@ Content-Type: application/json
   "totalCopies": 3
 }
 
-### Delete a contact
-DELETE https://cse341-t3-lv-1-w2.onrender.com/api/contacts/68cd94b356eb35fd1106f9fc
+### Delete a book
+DELETE https://cse341-t3-lv-1-w2.onrender.com/api/books/9780232350878
 Content-Type: application/json
+
+
+###################### USERS #############################
